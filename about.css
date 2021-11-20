@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: black;
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+/* ハンバーガーメニュー */
+
+.drawer{
+}
+.drawer-hidden{
+    display: none;
+}
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after{
+    content: "";
+    display: block;
+    z-index: 1000;
+    height: 0.2rem;
+    width: 2rem;
+    background-color:white;
+    position: absolute;
+    transition: 0.5s;
+}
+.drawer-open::after{
+    content: "menu";
+    color: white;
+    position: relative;
+    bottom: 0.5em;
+    left: 3em;
+    font-size: 0.7em;
+
+}
+.drawer-open span:before{
+    top: 0.6rem;
+}
+.drawer-open span:after{
+    bottom:0.6rem;
+}
+.drawer-open span.change-color{
+    background-color: black;
+}
+.drawer-open span.change-color:before{
+    background-color: black;
+}
+.drawer-open span.change-color::after{
+    background-color: black;
+}
+#drawer-check:checked ~ .drawer-open span{
+    background-color: rgb(255, 255, 255,0);
+}
+#drawer-check:checked ~ .drawer-open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+#drawer-check:checked ~ .drawer-open span::after{
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.drawer-content{
+    z-index: 102;
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 150%;
+    background-color:black;
+    color: white;
+    opacity: 0.7;
+    transition: 0.5s;
+    text-align: center;
+    padding-top: 10%;
+    padding-right: 10%;
+    font-size: 2em;
+    line-height: 2em;
+    font-family: 'Arial Black',sans-serif;;
+
+}
+.drawer-content ul li{
+    list-style: none;
+}
+
+.drawer-list a{
+    text-decoration: none;
+    color: white;
+}
+.drawer-content a:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+.drawer-items{
+}
+#drawer-check:checked ~ .drawer-content{
+    right: 0;
+}
+.drawer-open{
+    position: fixed;
+    bottom: -10rem;
+    top: 5rem;
+    right: 8rem;
+    z-index: 130;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+}
+.drawer-close {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color:black;
+    top: 0;
+    left: 100%;
+    z-index: 99;
+    transition: .5s;
+    opacity: 0.5;
+  }
+  
+  #drawer-check:checked ~ .drawer-close {
+    left: 0;
+  }
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background:linear-gradient(90deg,white 0%,white 50%,black 100%);
+}
+.header-image{
+    width: 86.5%;
+    height: 40vh;
+    background-size: cover;
+    background-image: url(images/jacek-dylag-PMxT-1.png);
+    filter: brightness(75%);
+}
+.top-img{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 65%;
+}
+.top-img h1{
+    font-size: 3.5em;
+}
+.header-logo{
+    z-index: 3;
+    position:fixed;
+    top:5%;
+    left: 10%;
+}
+.header-logo img{
+    width: 120%;
+    filter: drop-shadow(5px 5px 10px #666);
+
+}
+
+/* vision */
+
+.vision{
+    padding-top: 6rem;
+    width: 100%;
+    background-color: white;
+}
+.vision-wrapper{
+    margin-left: 25%;
+    line-height: 1.8rem;
+}
+.vision-wrapper h2{
+    font-size: 1.5em;
+    margin-bottom: 1.2rem;
+}
+.vision-wrapper h3{
+    opacity: 0.8;
+    margin-bottom: 1.2rem;
+}
+.vision-wrapper p{
+    font-size: 0.7em;
+    opacity: 0.8;
+}
+
+/* message */
+
+.message{
+    position: relative;
+    background-color: #fff;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+}
+.message-img{
+    background-image: url(images/ceo-img.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    height: 25%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.message-wrapper{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    width: 55%;
+    background-color: #F0F0F0;
+    margin-left: 32%;
+
+}
+.voice{
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1.8rem;
+}
+.voice h2{
+    font-size: 1.5em;
+    margin-bottom: 1.2rem;
+}
+.voice p{
+    font-size: 0.7em;
+    opacity: 0.8;
+}
+
+/* COMPANY */
+
+.company{
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+}
+.company h2{
+    font-size: 1.5em;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    margin-left: 8rem;
+}
+.information{
+    margin-left: 30%;
+    text-align: left;
+    margin-bottom: 2rem;
+
+}
+.information tr{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    opacity: 0.7;
+}
+.information td{
+    padding: 1rem 1rem;
+    width: 30rem;
+
+}
+.information th{
+    padding-right: 2rem;
+    width: 10rem;
+}
+.company img{
+    width: 80%;
+    
+}
+.map-img{
+    text-align: center;
+    padding-bottom: 6rem;
+}
+/* footer */
+footer{
+    background-color:black;
+    height: 3rem;
+}
+footer p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #525252;
+    color:white;
+    font-size: 0.2em;
+}
+
+
+
+
+
+
+
+
