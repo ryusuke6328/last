@@ -1,0 +1,130 @@
+@media(max-width:890px){
+    body{
+        
+    }
+    .drawer-content{
+        width: 70vw;
+    }
+    .header-img{
+    }
+    .header-wrapper h1{
+        top: 40%;
+        left: 50%;
+        font-size: 2.5em;
+        line-height: 3rem;
+    }
+    .header-wrapper p{
+        top: 30%;
+        left: 50%;
+        font-size: 0.8em;
+    }
+    .header-logo{
+        left: 7%;
+    }
+    .drawer-open{
+        right: 5%;
+    }
+    .main-wrapper{
+        background: linear-gradient(180deg,white 0%,white 10%,#F0F0F0 10%,#F0F0F0 100%);
+    }
+    .content-wrapper{
+        width: 95%;
+        text-align: center;
+    }
+    .content-wrapper img{
+    }
+
+    .ex{
+        top: 15%;
+        width: 90%;
+        height: 65%;
+    }
+    .intro-wrapper{
+        display: block;
+    }
+    .topics{
+        margin-left: 0;
+    }
+    .section{
+        display: block;
+    }
+    .section img{
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 5rem;
+    }
+    .contact{
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+    .contact-wrapper{
+        padding-bottom: 3rem;
+    }
+    .about-wrapper img{
+    }
+    html{
+    }
+    .top-img{
+        left: 40%;
+       }
+       .top-img h1{
+           font-size: 2.5em;
+       }
+       .vision-wrapper p{
+           line-height: 1.3;
+       }
+       .vision-wrapper{
+           text-align: center;
+           margin: 0 auto;
+       }
+       .message{
+           text-align: center;
+           margin: 0 auto;
+       }
+       .message-img{
+           background-position: 0% 50%;
+           top:3rem;
+           left: 0;
+           width: 100%;
+           height: 10rem;
+       }
+       .message-wrapper{
+           width: 100%;
+           margin: 0 auto;
+       }
+       .voice{
+           width: 80%;
+           line-height: 1.5;
+       }
+       tr{
+           display: block;
+       }
+       .information th{
+           width: 15rem;
+       }
+       .information{
+           margin-left: 0.5rem;
+           font-size: 0.8em;
+       }
+       .company h2{
+           margin: 0 auto;
+           text-align: center;
+       }
+       .company img{
+           width: 100%;
+       }
+       .map-img{
+           padding-bottom: 3rem;
+       }
+       
+}
+
+
+
+
+
+
+
+
+
+

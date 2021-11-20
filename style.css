@@ -1,0 +1,338 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    }
+
+/* ハンバーガーメニュー */
+
+.drawer-items{
+}
+.drawer-hidden{
+    display: none;
+}
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after{
+    content: "";
+    display: block;
+    z-index: 1000;
+    height: 0.2rem;
+    width: 2rem;
+    background-color:white;
+    position: absolute;
+    transition: 0.5s;
+}
+.drawer-open::after{
+    content: "menu";
+    color: white;
+    position: relative;
+    bottom: 0.5em;
+    left: 3em;
+    font-size: 0.7em;
+
+}
+.drawer-open span:before{
+    top: 0.6rem;
+}
+.drawer-open span:after{
+    bottom:0.6rem;
+}
+.drawer-open span.change-color{
+    background-color: black;
+}
+.drawer-open span.change-color:before{
+    background-color: black;
+}
+.drawer-open span.change-color::after{
+    background-color: black;
+}
+#drawer-check:checked ~ .drawer-open span{
+    background-color: rgb(255, 255, 255,0);
+}
+#drawer-check:checked ~ .drawer-open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+#drawer-check:checked ~ .drawer-open span::after{
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.drawer-content{
+    z-index: 102;
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 150%;
+    background-color:black;
+    color: white;
+    opacity: 0.7;
+    transition: 0.5s;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 2em;
+    line-height: 2em;
+    font-family: 'Arial Black',sans-serif;;
+
+}
+.drawer-content ul li{
+    list-style: none;
+}
+
+.drawer-list a{
+    text-decoration: none;
+    color: white;
+}
+.drawer-content a:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+.drawer-items{
+}
+#drawer-check:checked ~ .drawer-content{
+    right: 0;
+}
+.drawer-open{
+    position: fixed;
+    top: 5rem;
+    right: 8rem;
+    z-index: 130;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+}
+.drawer-close {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color:black;
+    top: 0;
+    left: 100%;
+    z-index: 99;
+    transition: .5s;
+    opacity: 0.5;
+  }
+  
+  #drawer-check:checked ~ .drawer-close {
+    left: 0;
+  }
+
+/* header */
+.header-wrapper{
+    position: relative;
+    background: linear-gradient(90deg,white 0%,white 50%,black 50%,black 100%);
+    height: 100vh;
+    width: 100%;
+
+}
+.kv-wrapper{
+    width: 76.4%;
+    height: 86.5%;
+    background-image: url(images/the-honest-company-uM-WXMr-1.png);
+    background-size: cover;
+    background-position: center 0;
+    position: relative;
+    filter: brightness(75%);
+    z-index: 1;
+}
+.header-logo{
+    z-index: 3;
+    position:fixed;
+    top:5%;
+    left: 3%;
+}
+.header-logo img{
+    width: 120%;
+    filter: drop-shadow(5px 5px 10px #666);
+}
+.header-wrapper h1{
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    font-size: 4em;
+    line-height: 5rem;
+}
+.header-wrapper p{
+    z-index: 2;
+    position: absolute;
+    left: 65%;
+    top: 20%;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.5rem;
+}
+.header-wrapper h1,.header-wrapper p{
+    color: white;
+}
+
+/* main */
+
+main{
+    padding-top: 7rem;
+
+}
+.main-wrapper{
+    background: linear-gradient(180deg,white 0%,white 40%,#F0F0F0 40%,#F0F0F0 100%);
+
+}
+.content-wrapper{
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+
+}
+.about-wrapper{
+    position: relative;
+    padding-bottom: 2rem;
+
+}
+.about-wrapper img{
+    width: 100%;
+    height: 35rem;
+}
+.ex{
+    background-color: #fff;
+    color: black;
+    width: 55%;
+    height: 60%;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    overflow-wrap: break-word;
+}
+.ex h2{
+    font-size: 2em;
+    margin-bottom: 2rem;
+}
+.ex p{
+    line-height: 1.7rem;
+    font-size: 0.8em;
+    margin-bottom: 2rem;
+    word-break: break-all;
+    opacity: 0.8;
+    padding-right: 1rem;
+
+}
+/* 使いまわしボタンデザイン */
+.read-btn{
+    background-color: black;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+}
+.intro-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+}
+.intro-wrapper h2{
+    font-size: 2em;
+    margin: 2rem 0;
+}
+.intro-wrapper img{
+    width: 100%;
+    height: 60%;
+}
+.intro-wrapper p{
+    margin: 2rem 0;
+}
+
+.works{
+    margin-right: 2rem;
+}
+
+/* topics */
+
+.news-wrapper{
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+.news-wrapper h2{
+    font-size: 2em;
+    margin-top: 4rem;
+    margin-bottom: 2rem; 
+}
+.topics{
+    margin-left: 40%;
+}
+.topics{
+    margin-bottom: 2rem;
+}
+.topics p{
+    font-size: 0.8em;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 1.5rem;
+}
+.topics span{
+    font-size: 0.3em;
+    opacity: 0.7;
+}
+.read-button{
+    text-align: right;
+    margin-bottom: 3rem;
+}
+.contact-wrapper{
+    background-color: #F2F2F2;
+    padding-bottom: 8rem;
+}
+.section{
+    width: 75%;
+    display: flex;
+    margin: 0 auto;
+}
+.section img{
+    width: 55%;
+    margin-top: 3rem;
+    margin-right: 5rem;
+}
+.contact{
+    margin-top: 8rem;
+    width: 100%;
+}
+.contact h2{
+    font-size: 2em;
+    margin-bottom: 2rem;
+}
+.contact p{
+    font-size: 0.9em;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+}
+footer{
+    background-color:black;
+    height: 3rem;
+}
+footer p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #525252;
+    color:white;
+    font-size: 0.2em;
+}
+
+
+
+
+
+
+
